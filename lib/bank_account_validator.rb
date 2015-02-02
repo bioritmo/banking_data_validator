@@ -6,6 +6,7 @@ class BankAccountValidator < ActiveModel::Validator
   autoload :BancoDoBrasil,  "bank_account_validator/banco_do_brasil"
   autoload :BancoItau,      "bank_account_validator/banco_itau"
   autoload :BancoSantander, "bank_account_validator/banco_santander"
+  autoload :VERSION,        "bank_account_validator/version"
 
   def initialize(options = {})
     super
