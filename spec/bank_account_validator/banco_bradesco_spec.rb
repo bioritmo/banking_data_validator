@@ -1,4 +1,4 @@
-RSpec.describe BankAccountValidator::BancoBradesco do
+RSpec.describe BankingDataValidator::BancoBradesco do
   describe "#valid_account?" do
     it "is true when the given account data is valid" do
       expect(subject).to be_valid_account(nil, "0238069", "2")

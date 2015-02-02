@@ -1,6 +1,6 @@
-require "bank_account_validator"
+require "banking_data_validator"
 
-RSpec.describe BankAccountValidator do
+RSpec.describe BankingDataValidator do
 
   it "requires a branch_number" do
     [nil, "X"].each do |invalid_branch_number|
@@ -54,11 +54,11 @@ end
 class Payment
   include ActiveModel::Model
   attr_accessor :bank_number, :branch_number, :account_number, :account_digit
-  validates_with BankAccountValidator
+  validates_with BankingDataValidator
 end
 
 class CustomPayment
   include ActiveModel::Model
   attr_accessor :c_bank, :c_branch, :c_account, :c_digit
-  validates_with BankAccountValidator, bank_number: :c_bank, branch_number: :c_branch, account_number: :c_account, account_digit: :c_digit
+  validates_with BankingDataValidator, bank_number: :c_bank, branch_number: :c_branch, account_number: :c_account, account_digit: :c_digit
 end

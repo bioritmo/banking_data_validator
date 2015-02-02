@@ -1,4 +1,4 @@
-class BankAccountValidator
+class BankingDataValidator
   class BancoSantander < BancoBase
     def valid_account?(branch, account_number, account_digit)
       account_digit.upcase == module10_santander("#{branch}#{account_number}").to_s

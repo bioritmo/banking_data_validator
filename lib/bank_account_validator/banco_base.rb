@@ -1,4 +1,4 @@
-class BankAccountValidator
+class BankingDataValidator
   class BancoBase
     def valid_account?(branch, account_number, account_digit)
       true

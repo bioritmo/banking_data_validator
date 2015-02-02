@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
-# Specify your gem"s dependencies in bank_account_validator.gemspec
+# Specify your gem"s dependencies in banking_data_validator.gemspec
 gemspec

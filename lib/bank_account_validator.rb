@@ -1,12 +1,13 @@
 require "active_model"
 
-class BankAccountValidator < ActiveModel::Validator
-  autoload :BancoBase,      "bank_account_validator/banco_base"
-  autoload :BancoBradesco,  "bank_account_validator/banco_bradesco"
-  autoload :BancoDoBrasil,  "bank_account_validator/banco_do_brasil"
-  autoload :BancoItau,      "bank_account_validator/banco_itau"
-  autoload :BancoSantander, "bank_account_validator/banco_santander"
-  autoload :VERSION,        "bank_account_validator/version"
+class BankingDataValidator < ActiveModel::Validator
+  VERSION = "0.0.1"
+
+  autoload :BancoBase,      "banking_data_validator/banco_base"
+  autoload :BancoBradesco,  "banking_data_validator/banco_bradesco"
+  autoload :BancoDoBrasil,  "banking_data_validator/banco_do_brasil"
+  autoload :BancoItau,      "banking_data_validator/banco_itau"
+  autoload :BancoSantander, "banking_data_validator/banco_santander"
 
   def initialize(options = {})
     super

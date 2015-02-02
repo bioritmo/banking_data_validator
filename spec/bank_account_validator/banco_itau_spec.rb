@@ -1,4 +1,4 @@
-RSpec.describe BankAccountValidator::BancoItau do
+RSpec.describe BankingDataValidator::BancoItau do
   describe "#valid_account?" do
     it "valid account digits" do
       expect(subject).to be_valid_account("0262", "42602", "6")

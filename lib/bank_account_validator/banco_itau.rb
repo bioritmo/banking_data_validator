@@ -1,4 +1,4 @@
-class BankAccountValidator
+class BankingDataValidator
   class BancoItau < BancoBase
     def valid_account?(branch, account_number, account_digit)
       account_digit == module10("#{branch}#{account_number}")

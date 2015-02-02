@@ -1,4 +1,4 @@
-RSpec.describe BankAccountValidator::BancoSantander do
+RSpec.describe BankingDataValidator::BancoSantander do
   describe "#valid_account?" do
     it "valid account digits" do
       expect(subject).to be_valid_account("0189", "01017417", "9")
