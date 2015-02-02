@@ -1,5 +1,3 @@
-require "banking_data_validator"
-
 RSpec.describe BankingDataValidator do
 
   it "requires a branch_number" do
