@@ -6,17 +6,14 @@ class BankAccountValidator
 
     private
 
-    def module10_santander(str)
-      valor_inicial = str.kind_of?(String) ? str : str.to_s
-      fatores = [9, 7, 3, 1, 9, 7, 1, 3, 1, 9, 7, 3]
-      total = 0
-      posicao = 0
-      valor_inicial.split(//).each do |digito|
-        total += (digito.to_i * fatores[posicao]).to_s.split(//)[-1].to_i
-        posicao = (posicao < (fatores.size - 1)) ? (posicao + 1) : 0
+    def module10_santander(account_number)
+      factors = [9, 7, 3, 1, 9, 7, 1, 3, 1, 9, 7, 3].cycle
+
+      total = account_number.chars.map(&:to_i).inject(0) do |acc, digito|
+        acc + (digito * factors.next % 10)
       end
-      dv = 10 - total.to_s.split(//)[-1].to_i
-      dv == 10 ? 0 : dv
+
+      10 - total % 10
     end
   end
 end
