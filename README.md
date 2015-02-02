@@ -1,5 +1,12 @@
 # BankAccountValidator
 
+[![Build Status](https://travis-ci.org/americodls/bank_account_validator.svg)](https://travis-ci.org/americodls/bank_account_validator)
+[![Code Climate](https://codeclimate.com/github/americodls/bank_account_validator/badges/gpa.svg)](https://codeclimate.com/github/americodls/bank_account_validator)
+[![Coverage Status](https://coveralls.io/repos/americodls/bank_account_validator/badge.svg)](https://coveralls.io/r/americodls/bank_account_validator)
+[![Dependency Status](https://gemnasium.com/americodls/bank_account_validator.svg)](https://gemnasium.com/americodls/bank_account_validator)
+[![security](https://hakiri.io/github/americodls/bank_account_validator/master.svg)](https://hakiri.io/github/americodls/bank_account_validator/master)
+[![Inline docs](http://inch-ci.org/github/americodls/bank_account_validator.svg?branch=master&style=shields)](http://inch-ci.org/github/americodls/bank_account_validator)
+
 An implementation of ActiveModel::Validator for bank accounts.
 
 ## Installation
