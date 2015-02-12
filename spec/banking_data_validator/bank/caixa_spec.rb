@@ -12,7 +12,7 @@ module BankingDataValidator
         end
 
         it "returns false when is given an account_number with an invalid digit" do
-          expect(described_class.valid_account?("1234", "56789012345", "6")).to eq(false)
+          expect(Caixa.valid_account?("1234", "56789012345", "6")).to eq(false)
         end
       end
     end

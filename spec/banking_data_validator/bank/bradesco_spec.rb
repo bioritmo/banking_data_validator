@@ -14,7 +14,7 @@ module BankingDataValidator
         end
 
         it "returns false when is given an account_number with an invalid digit" do
-          expect(described_class.valid_account?(nil, "87362", "0")).to eq(false)
+          expect(Bradesco.valid_account?(nil, "87362", "0")).to eq(false)
         end
       end
     end
