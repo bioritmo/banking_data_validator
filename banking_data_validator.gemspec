@@ -1,9 +1,10 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require "banking_data_validator/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "banking_data_validator"
-  spec.version       = "0.0.1"
+  spec.version       = BankingDataValidator::VERSION
   spec.authors       = ["Americo Duarte"]
   spec.email         = ["americodls@gmail.com"]
   spec.summary       = %q{An implementation of ActiveModel::Validator for bank accounts.}
