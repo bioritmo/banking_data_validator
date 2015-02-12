@@ -15,12 +15,14 @@ module BankingDataValidator
 
       private
 
-      def multiplier(factors)
-        multiplier_position = factors.cycle
-
-        @account_number.chars.map(&:to_i).reverse.inject(0) do |total, algarism|
-          total + algarism * multiplier_position.next
+      def multiply_factors
+        digits.reverse.inject(0) do |total, algarism|
+          total + algarism * factors.next
         end
+      end
+
+      def digits
+        @account_number.chars.map(&:to_i)
       end
     end
   end

@@ -14,7 +14,11 @@ module BankingDataValidator
       end
 
       def raw_checksum
-        @raw_checksum ||= multiplier([2, 3, 4, 5, 6, 7]) % 11
+        @raw_checksum ||= multiply_factors % 11
+      end
+
+      def factors
+        @factors ||= [2, 3, 4, 5, 6, 7].cycle
       end
     end
   end

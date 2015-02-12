@@ -6,16 +6,20 @@ module BankingDataValidator
       private
 
       def checksum
-        "#{(10 - (raw_checksum % 10)) % 10}"
+        "#{raw_checksum % 10}"
       end
 
       def raw_checksum
-        branch_and_account_digits.reverse.inject(0) do |total, digit|
+        10 - (multiply_factors % 10)
+      end
+
+      def multiply_factors
+        digits.reverse.inject(0) do |total, digit|
           total + sum_digits(digit * factors.next)
         end
       end
 
-      def branch_and_account_digits
+      def digits
         "#{@branch}#{@account_number}".chars.map(&:to_i)
       end
 
