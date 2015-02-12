@@ -18,7 +18,7 @@ module BankingDataValidator
       end
 
       def factors
-        @factors ||= [2, 3, 4, 5, 6, 7].cycle
+        @factors ||= (2..7).cycle
       end
     end
   end

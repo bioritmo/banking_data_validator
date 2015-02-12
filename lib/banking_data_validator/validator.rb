@@ -19,15 +19,9 @@ module BankingDataValidator
 
       bank = Bank.build_class(bank_number)
 
-      if !valid_number?(branch_number)
-        record.errors.add(@branch_number, :not_a_number)
-      end
-
-      if !valid_number?(account_number)
-        record.errors.add(@account_number, :not_a_number)
-      elsif !bank.valid_account?(branch_number, account_number, account_digit)
-        record.errors.add(@account_digit)
-      end
+      record.errors.add(@branch_number, :not_a_number) unless valid_number?(branch_number)
+      record.errors.add(@account_number, :not_a_number) unless valid_number?(account_number)
+      record.errors.add(@account_digit) unless bank.valid_account?(branch_number, account_number, account_digit)
     end
 
     private
@@ -35,6 +29,7 @@ module BankingDataValidator
     def valid_number?(number)
       Integer(number, 10)
     rescue
+      false
     end
   end
 end

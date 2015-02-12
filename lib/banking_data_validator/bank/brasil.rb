@@ -17,7 +17,7 @@ module BankingDataValidator
       end
 
       def factors
-        @factors ||= [9, 8, 7, 6, 5, 4, 3, 2].cycle
+        @factors ||= (2..9).reverse_each.cycle
       end
     end
   end

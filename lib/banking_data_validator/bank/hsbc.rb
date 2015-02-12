@@ -3,14 +3,14 @@ require "banking_data_validator/bank/base"
 module BankingDataValidator
   module Bank
     class HSBC < Base
-      # private
+      private
 
       def checksum
         "#{raw_checksum % 10}"
       end
 
       def raw_checksum
-        @raw_checksum ||= (multiply_factors % 11)
+        @raw_checksum ||= multiply_factors % 11
       end
 
       def factors

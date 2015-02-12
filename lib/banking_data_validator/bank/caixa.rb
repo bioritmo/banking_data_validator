@@ -10,7 +10,7 @@ module BankingDataValidator
       end
 
       def raw_checksum
-        @raw_checksum ||= (multiply_factors * 10)
+        @raw_checksum ||= multiply_factors * 10
       end
 
       def factors
