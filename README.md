@@ -1,6 +1,6 @@
 # BankingDataValidator
 
-[![Build Status](https://semaphoreapp.com/api/v1/projects/94783b1d-8994-47d8-b971-d1812dd31d40/339766/badge.png)](https://semaphoreapp.com/aduarte/banking_data_validator)
+[![Build Status](https://semaphoreapp.com/api/v1/projects/94783b1d-8994-47d8-b971-d1812dd31d40/339766/shields_badge.svg)](https://semaphoreapp.com/aduarte/banking_data_validator)
 [![Code Climate](https://codeclimate.com/github/americodls/banking_data_validator/badges/gpa.svg)](https://codeclimate.com/github/americodls/banking_data_validator)
 [![Test Coverage](https://codeclimate.com/github/americodls/banking_data_validator/badges/coverage.svg)](https://codeclimate.com/github/americodls/banking_data_validator)
 [![Dependency Status](https://gemnasium.com/americodls/banking_data_validator.svg)](https://gemnasium.com/americodls/banking_data_validator)
