@@ -34,6 +34,15 @@ module BankingDataValidator
       end
     end
 
+    it "requires a valid account_digit" do
+      valid_payment = Payment.new(bank_number: "341", branch_number: "8252", account_number: "09881", account_digit: "2")
+      expect(valid_payment).to be_valid
+
+      invalid_payment = Payment.new(bank_number: "341", branch_number: "8252", account_number: "09881", account_digit: "3")
+      expect(invalid_payment).to_not be_valid
+      expect(invalid_payment.errors[:account_digit]).to include("is invalid")
+    end
+
     it "uses default field names when custom fields are not given" do
       expect(
         Payment.new(bank_number: nil, branch_number: "123", account_number: "0238069", account_digit: "2")
