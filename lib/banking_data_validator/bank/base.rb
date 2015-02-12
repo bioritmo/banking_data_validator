@@ -9,6 +9,10 @@ module BankingDataValidator
         @branch, @account_number, @account_digit = branch, account_number, account_digit
       end
 
+      def valid_account?
+        @account_digit.upcase == checksum
+      end
+
       private
 
       def multiplier(factors)

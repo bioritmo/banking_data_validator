@@ -3,20 +3,24 @@ require "banking_data_validator/bank/base"
 module BankingDataValidator
   module Bank
     class Santander < Base
-      def valid_account?
-        @account_digit.upcase == module10_santander
-      end
-
       private
 
-      def module10_santander
-        factors = [9, 7, 3, 1, 9, 7, 1, 3, 1, 9, 7, 3].cycle
+      def checksum
+        "#{10 - raw_checksum % 10}"
+      end
 
-        total = "#{@branch}#{@account_number}".chars.map(&:to_i).inject(0) do |acc, digito|
-          acc + (digito * factors.next % 10)
+      def raw_checksum
+        branch_and_account_digits.inject(0) do |total, digit|
+          total + (digit * factors.next % 10)
         end
+      end
 
-        "#{10 - total % 10}"
+      def branch_and_account_digits
+        "#{@branch}#{@account_number}".chars.map(&:to_i)
+      end
+
+      def factors
+        @factors ||= [9, 7, 3, 1, 9, 7, 1, 3, 1, 9, 7, 3].cycle
       end
     end
   end
