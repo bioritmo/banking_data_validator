@@ -12,10 +12,10 @@ module BankingDataValidator
     end
 
     def validate(record)
-      bank_number    = record.public_send(@bank_number)
-      branch_number  = record.public_send(@branch_number)
-      account_number = record.public_send(@account_number)
-      account_digit  = record.public_send(@account_digit)
+      bank_number    = "#{record.public_send(@bank_number)}"
+      branch_number  = "#{record.public_send(@branch_number)}"
+      account_number = "#{record.public_send(@account_number)}"
+      account_digit  = "#{record.public_send(@account_digit)}"
 
       bank = Bank.build_class(bank_number)
 
