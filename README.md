@@ -27,7 +27,31 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Just call `validates_with BankingDataValidator::Validator`.
+
+```ruby
+class Payment
+  # include ActiveModel::Model
+  # attr_accessor :bank_number, :branch_number, :account_number, :account_digit
+  
+  validates_with BankingDataValidator::Validator
+end
+```
+
+But if your attribute names are different of our default names you can pass your custom names.
+
+```ruby
+class CustomPayment
+  # include ActiveModel::Model
+  # attr_accessor :c_bank, :c_branch, :c_account, :c_digit
+  
+  validates_with  BankingDataValidator::Validator,
+                  bank_number:    :c_bank,
+                  branch_number:  :c_branch,
+                  account_number: :c_account,
+                  account_digit:  :c_digit
+end
+```
 
 ## Contributing
 
