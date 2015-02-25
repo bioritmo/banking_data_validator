@@ -5,7 +5,7 @@ module BankingDataValidator
     RSpec.describe Itau do
       describe "#valid_account?" do
         it "returns true when is given an account_number with a valid digit" do
-          expect(Itau.valid_account?("0262", "42602", "6")).to eq(true)
+          expect(Itau.valid_account?(262, "42602", "6")).to eq(true)
           expect(Itau.valid_account?("1517", "15667", "3")).to eq(true)
           expect(Itau.valid_account?("2545", "02366", "1")).to eq(true)
           expect(Itau.valid_account?("8252", "09881", "2")).to eq(true)

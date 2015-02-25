@@ -7,7 +7,7 @@ module BankingDataValidator
         it "returns true when is given an account_number with a valid digit" do
           expect(Brasil.valid_account?(nil, "65005", "6")).to eq(true)
           expect(Brasil.valid_account?(nil, "22029", "9")).to eq(true)
-          expect(Brasil.valid_account?(nil, "70000", "2")).to eq(true)
+          expect(Brasil.valid_account?(nil, 70000, "2")).to eq(true)
           expect(Brasil.valid_account?(nil, "7107", "2")).to eq(true)
           expect(Brasil.valid_account?(nil, "80000", "7")).to eq(true)
           expect(Brasil.valid_account?(nil, "8354", "2")).to eq(true)

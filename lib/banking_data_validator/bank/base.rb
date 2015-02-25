@@ -6,7 +6,9 @@ module BankingDataValidator
       end
 
       def initialize(branch, account_number, account_digit)
-        @branch, @account_number, @account_digit = branch, account_number, account_digit
+        @branch         = padding_with_zeros(branch, 4)
+        @account_number = padding_with_zeros(account_number)
+        @account_digit  = padding_with_zeros(account_digit)
       end
 
       def valid_account?
@@ -14,6 +16,10 @@ module BankingDataValidator
       end
 
       private
+
+      def padding_with_zeros(number, padding = 0)
+        number.to_s.rjust(padding, "0")
+      end
 
       def multiply_factors
         digits.reverse.inject(0) do |total, algarism|
