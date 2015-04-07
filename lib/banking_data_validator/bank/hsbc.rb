@@ -3,6 +3,14 @@ require "banking_data_validator/bank/base"
 module BankingDataValidator
   module Bank
     class HSBC < Base
+
+      def initialize(branch, account_number, account_digit)
+        account = account_number + account_digit
+        @branch         = padding_with_zeros(branch, 4)
+        @account_number = padding_with_zeros(account[0..5])
+        @account_digit  = padding_with_zeros(account[6])
+      end
+
       private
 
       def checksum
