@@ -6,11 +6,11 @@ module BankingDataValidator
       private
 
       def checksum
-        "#{raw_checksum % 11}"
+        "#{raw_checksum % 10}"
       end
 
       def raw_checksum
-        @raw_checksum ||= multiply_factors * 10
+        @raw_checksum ||= multiply_factors * 10 % 11
       end
 
       def factors
