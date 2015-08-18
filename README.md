@@ -1,10 +1,8 @@
 # BankingDataValidator
-
-[![Build Status](https://semaphoreapp.com/api/v1/projects/94783b1d-8994-47d8-b971-d1812dd31d40/339766/shields_badge.svg)](https://semaphoreapp.com/aduarte/banking_data_validator)
+[![Build Status](https://semaphoreci.com/api/v1/projects/dde81c2d-e29f-4c2f-ba0a-6a1398c297fb/514436/shields_badge.svg)](https://semaphoreci.com/bioritmo/banking_data_validator)
 [![Code Climate](https://codeclimate.com/github/americodls/banking_data_validator/badges/gpa.svg)](https://codeclimate.com/github/americodls/banking_data_validator)
 [![Test Coverage](https://codeclimate.com/github/americodls/banking_data_validator/badges/coverage.svg)](https://codeclimate.com/github/americodls/banking_data_validator)
 [![Dependency Status](https://gemnasium.com/americodls/banking_data_validator.svg)](https://gemnasium.com/americodls/banking_data_validator)
-[![security](https://hakiri.io/github/americodls/banking_data_validator/master.svg)](https://hakiri.io/github/americodls/banking_data_validator/master)
 [![Inline docs](http://inch-ci.org/github/americodls/banking_data_validator.svg?branch=master&style=shields)](http://inch-ci.org/github/americodls/banking_data_validator)
 
 An implementation of ActiveModel::Validator for bank accounts.
