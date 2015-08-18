@@ -3,6 +3,12 @@ require "banking_data_validator/bank/base"
 module BankingDataValidator
   module Bank
     class Santander < Base
+      def initialize(branch, account_number, account_digit)
+        @branch         = padding_with_zeros(branch, 4)
+        @account_number = padding_with_zeros(account_number, 8)
+        @account_digit  = padding_with_zeros(account_digit)
+      end
+
       private
 
       def checksum
